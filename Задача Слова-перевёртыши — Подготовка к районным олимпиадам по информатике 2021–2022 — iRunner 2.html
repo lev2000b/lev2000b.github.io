@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://acm.bsu.by/courses/241/problems/3759/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Задача Слова-перевёртыши — Подготовка к районным олимпиадам по информатике 2021–2022 — iRunner 2</title>
+
+        <link rel="icon" type="image/png" href="https://acm.bsu.by/static/favicon.png">
+        <link rel="yandex-tableau-widget" href="https://acm.bsu.by/static/manifest.json">
+        <link href="./Задача Слова-перевёртыши — Подготовка к районным олимпиадам по информатике 2021–2022 — iRunner 2_files/bootstrap.css" rel="stylesheet">
+        
+        <link href="./Задача Слова-перевёртыши — Подготовка к районным олимпиадам по информатике 2021–2022 — iRunner 2_files/irunner2.css" rel="stylesheet">
+
+        <!--[if lt IE 9]>
+            <script src="/static/html5shiv/html5shiv.min.js"></script>
+            <script src="/static/respond/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="./Задача Слова-перевёртыши — Подготовка к районным олимпиадам по информатике 2021–2022 — iRunner 2_files/jquery-1.11.3.min.js.Без названия"></script>
+        <script src="./Задача Слова-перевёртыши — Подготовка к районным олимпиадам по информатике 2021–2022 — iRunner 2_files/bootstrap.min.js.Без названия"></script>
+        <script src="./Задача Слова-перевёртыши — Подготовка к районным олимпиадам по информатике 2021–2022 — iRunner 2_files/irunner2.js.Без названия"></script>
+        <script src="./Задача Слова-перевёртыши — Подготовка к районным олимпиадам по информатике 2021–2022 — iRunner 2_files/saved_resource"></script>
+
+        
+    
+
+<link href="./Задача Слова-перевёртыши — Подготовка к районным олимпиадам по информатике 2021–2022 — iRunner 2_files/katex.min.css" rel="stylesheet">
+<script src="./Задача Слова-перевёртыши — Подготовка к районным олимпиадам по информатике 2021–2022 — iRunner 2_files/katex.min.js.Без названия"></script>
+<script src="./Задача Слова-перевёртыши — Подготовка к районным олимпиадам по информатике 2021–2022 — iRunner 2_files/copy-tex.min.js.Без названия"></script>
+<style type="text/css">.pylightex .verbatim .hll { background-color: #ffffcc }
+.pylightex .verbatim  {  }
+.pylightex .verbatim .c { color: #408080; font-style: italic } /* Comment */
+.pylightex .verbatim .err { border: 1px solid #FF0000 } /* Error */
+.pylightex .verbatim .k { color: #008000; font-weight: bold } /* Keyword */
+.pylightex .verbatim .o { color: #666666 } /* Operator */
+.pylightex .verbatim .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.pylightex .verbatim .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.pylightex .verbatim .cp { color: #BC7A00 } /* Comment.Preproc */
+.pylightex .verbatim .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.pylightex .verbatim .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.pylightex .verbatim .cs { color: #408080; font-style: italic } /* Comment.Special */
+.pylightex .verbatim .gd { color: #A00000 } /* Generic.Deleted */
+.pylightex .verbatim .ge { font-style: italic } /* Generic.Emph */
+.pylightex .verbatim .gr { color: #FF0000 } /* Generic.Error */
+.pylightex .verbatim .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.pylightex .verbatim .gi { color: #00A000 } /* Generic.Inserted */
+.pylightex .verbatim .go { color: #888888 } /* Generic.Output */
+.pylightex .verbatim .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.pylightex .verbatim .gs { font-weight: bold } /* Generic.Strong */
+.pylightex .verbatim .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.pylightex .verbatim .gt { color: #0044DD } /* Generic.Traceback */
+.pylightex .verbatim .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.pylightex .verbatim .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.pylightex .verbatim .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.pylightex .verbatim .kp { color: #008000 } /* Keyword.Pseudo */
+.pylightex .verbatim .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.pylightex .verbatim .kt { color: #B00040 } /* Keyword.Type */
+.pylightex .verbatim .m { color: #666666 } /* Literal.Number */
+.pylightex .verbatim .s { color: #BA2121 } /* Literal.String */
+.pylightex .verbatim .na { color: #7D9029 } /* Name.Attribute */
+.pylightex .verbatim .nb { color: #008000 } /* Name.Builtin */
+.pylightex .verbatim .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.pylightex .verbatim .no { color: #880000 } /* Name.Constant */
+.pylightex .verbatim .nd { color: #AA22FF } /* Name.Decorator */
+.pylightex .verbatim .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.pylightex .verbatim .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.pylightex .verbatim .nf { color: #0000FF } /* Name.Function */
+.pylightex .verbatim .nl { color: #A0A000 } /* Name.Label */
+.pylightex .verbatim .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.pylightex .verbatim .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.pylightex .verbatim .nv { color: #19177C } /* Name.Variable */
+.pylightex .verbatim .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.pylightex .verbatim .w { color: #bbbbbb } /* Text.Whitespace */
+.pylightex .verbatim .mb { color: #666666 } /* Literal.Number.Bin */
+.pylightex .verbatim .mf { color: #666666 } /* Literal.Number.Float */
+.pylightex .verbatim .mh { color: #666666 } /* Literal.Number.Hex */
+.pylightex .verbatim .mi { color: #666666 } /* Literal.Number.Integer */
+.pylightex .verbatim .mo { color: #666666 } /* Literal.Number.Oct */
+.pylightex .verbatim .sa { color: #BA2121 } /* Literal.String.Affix */
+.pylightex .verbatim .sb { color: #BA2121 } /* Literal.String.Backtick */
+.pylightex .verbatim .sc { color: #BA2121 } /* Literal.String.Char */
+.pylightex .verbatim .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.pylightex .verbatim .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.pylightex .verbatim .s2 { color: #BA2121 } /* Literal.String.Double */
+.pylightex .verbatim .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.pylightex .verbatim .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.pylightex .verbatim .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.pylightex .verbatim .sx { color: #008000 } /* Literal.String.Other */
+.pylightex .verbatim .sr { color: #BB6688 } /* Literal.String.Regex */
+.pylightex .verbatim .s1 { color: #BA2121 } /* Literal.String.Single */
+.pylightex .verbatim .ss { color: #19177C } /* Literal.String.Symbol */
+.pylightex .verbatim .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.pylightex .verbatim .fm { color: #0000FF } /* Name.Function.Magic */
+.pylightex .verbatim .vc { color: #19177C } /* Name.Variable.Class */
+.pylightex .verbatim .vg { color: #19177C } /* Name.Variable.Global */
+.pylightex .verbatim .vi { color: #19177C } /* Name.Variable.Instance */
+.pylightex .verbatim .vm { color: #19177C } /* Name.Variable.Magic */
+.pylightex .verbatim .il { color: #666666 } /* Literal.Number.Integer.Long */</style>
+
+
+    </head>
+    <body>
+        
+    
+
+
+
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand ir-navbar-brand" href="https://acm.bsu.by/">iRunner 2</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                
+                    <li><a href="https://acm.bsu.by/courses/my/">Курсы</a></li>
+                
+                
+                
+                
+                
+                    <li><a href="https://acm.bsu.by/wiki/" target="_blank">Вики</a></li>
+                
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li><a href="https://acm.bsu.by/profile/"><span class="glyphicon glyphicon-user"></span> Фрунзенский 14</a></li>
+                    <li><a href="https://acm.bsu.by/logout/"><span class="glyphicon glyphicon-log-out"></span> Выход</a></li>
+                
+                <li>
+                    <a title="15 ноября 2021 г.">18:30:09</a>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+</nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-9 col-md-10 col-lg-8 col-sm-push-3 col-md-push-2 col-lg-push-2">
+                
+<div>
+    
+        
+    
+
+
+
+
+
+
+
+<div class="ir-problem-heading">
+    <div class="ir-problem-name">Задача Слова-перевёртыши</div>
+    
+    <div class="ir-problem-constraints">
+        Имя входного файла: <span class="ir-monospace">input.txt</span><br>
+        Имя выходного файла: <span class="ir-monospace">output.txt</span><br>
+        
+            Ограничение по времени: 3 с<br>
+        
+        
+            Ограничение по памяти: 64 МБ<br>
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="ir-problem-statement">
+ <p>Вам, наверное, известно, что некоторые символы,
+записанные на листе бумаги, после поворота этого
+листа на <span style="white-space: nowrap">180<sup>∘</sup></span>, также
+можно прочитать, хотя и по-другому. Так, прописные
+латинские буквы <span style="font-family: monospace">H</span>, <span style="font-family: monospace">I</span>,
+<span style="font-family: monospace">N</span>, <span style="font-family: monospace">O</span>,
+<span style="font-family: monospace">S</span>, <span style="font-family: monospace">X</span>,
+<span style="font-family: monospace">Z</span> и цифра <span style="font-family: monospace">0</span>
+после поворота читаются так же, а буква <span style="font-family: monospace">M</span>
+и цифра <span style="font-family: monospace">6</span> «превращаются»
+соответственно в символы <span style="font-family: monospace">W</span>
+и <span style="font-family: monospace">9</span>, и наоборот.</p>
+<p>Непустую строку, состоящую из прописных латинских
+букв и цифр, будем называть <i>словом-перевёртышем</i>,
+если она составлена только из перечисленных
+выше символов. После поворота листа это слово
+также можно прочитать, хотя и по-другому. Так,
+строка <span style="font-family: monospace">HOW</span> «превращается»
+в строку <span style="font-family: monospace">MOH</span>. С&nbsp;другой
+стороны, строка <span style="font-family: monospace">HOME</span> словом-перевёртышем
+не является.</p>
+<p>Найдите все слова-перевёртыши во входном файле.</p>
+<p></p><h2>Формат входных данных</h2>Первая строка входного
+файла содержит величину <span style="white-space: nowrap"><i>K</i></span>
+(<span style="white-space: nowrap">1 ≤ <i>K</i> ≤ 1000</span>)&nbsp;—
+количество обрабатываемых в дальнейшем строк.<p></p>
+<p>Каждая из последующих <span style="white-space: nowrap"><i>K</i></span>
+строк состоит только из прописных латинских
+букв и цифр, пустых строк нет. Длина одной строки
+не превосходит 3000 символов (в 50&nbsp;% тестов эта
+величина не превосходит 255).</p>
+<p></p><h2>Формат выходных данных</h2>В первой строке
+выведите одно число&nbsp;— количество найденных
+слов-перевёртышей. Каждая из последующих строк
+должна содержать строку, которая получится из
+очередного слова-перевёртыша после поворота
+листа бумаги. Слова-перевёртыши нужно выводить
+в том порядке, в котором они встречаются во входном
+файле.<p></p>
+<p>В начале и конце каждой строки не должно быть
+пробелов!</p>
+<p></p><h2>Пример</h2>  <table class="inputs-outputs">
+     <tbody><tr>
+         <th>
+            input.txt
+        </th> <th>
+            output.txt
+        </th> 
+    </tr> <tr>
+        <td>
+            4<br>LOL<br>WOW<br>WIHO9<br>PI<br>
+        </td><td>
+            2<br>MOM<br>6OHIM<br>
+        </td>
+    </tr>
+</tbody></table><p></p>
+<p></p> 
+
+</div>
+
+
+
+
+
+
+    <script>
+    $(document).ready(function() {
+        $(".pylightex span.math").katex({ displayMode: false });
+        $(".pylightex div.math").katex({ displayMode: true });
+    });
+</script>
+
+
+    
+</div>
+
+            </div>
+            <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2 col-sm-pull-9 col-md-pull-10 col-lg-pull-8">
+                
+
+
+<div class="list-group">
+    
+        <a href="https://acm.bsu.by/courses/241/" class="list-group-item list-group-item-info">
+            <span class="glyphicon glyphicon-info-sign"></span>
+            <span class="ir-icon-label">Подготовка к районным олимпиадам по информатике 2021–2022</span>
+        </a>
+    
+
+    
+
+    
+        <a href="https://acm.bsu.by/courses/241/problemset/" class="list-group-item active">
+            <span class="glyphicon glyphicon-th"></span>
+            <span class="ir-icon-label">Задачи по курсу</span>
+        </a>
+    
+
+    
+        <a href="https://acm.bsu.by/courses/241/my/problems/" class="list-group-item">
+            <span class="glyphicon glyphicon-th-large"></span>
+            <span class="ir-icon-label">Мои задачи</span>
+        </a>
+    
+
+    
+        <a href="https://acm.bsu.by/courses/241/mailbox/" class="list-group-item">
+            <span class="glyphicon glyphicon-envelope"></span>
+            <span class="ir-icon-label">Сообщения</span>
+            
+        </a>
+    
+
+    
+
+    
+        <a href="https://acm.bsu.by/courses/241/standings/" class="list-group-item">
+            <span class="glyphicon glyphicon-book"></span>
+            <span class="ir-icon-label">Журнал</span>
+        </a>
+    
+
+    
+
+    
+        <a href="https://acm.bsu.by/courses/241/solutions/" class="list-group-item">
+            <span class="glyphicon glyphicon-tasks"></span>
+            <span class="ir-icon-label">Все решения</span>
+        </a>
+    
+
+    
+        <a href="https://acm.bsu.by/courses/241/my/solutions/" class="list-group-item">
+            <span class="glyphicon glyphicon-tasks"></span>
+            <span class="ir-icon-label">Мои решения</span>
+        </a>
+    
+
+    
+        <a href="https://acm.bsu.by/courses/241/submit/" class="list-group-item">
+            <span class="glyphicon glyphicon-send"></span>
+            <span class="ir-icon-label">Отправить решение</span>
+        </a>
+    
+
+    
+        <a href="https://acm.bsu.by/courses/241/compilers/" class="list-group-item">
+            <span class="glyphicon glyphicon-pushpin"></span>
+            <span class="ir-icon-label">Компиляторы</span>
+        </a>
+    
+
+    
+        <a href="https://acm.bsu.by/courses/241/quizzes/" class="list-group-item">
+            <span class="glyphicon glyphicon-question-sign"></span>
+            <span class="ir-icon-label">Тесты</span>
+        </a>
+    
+
+    
+
+    
+</div>
+
+                <div class="hidden-lg">
+                    
+	
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-info">
+            Задача
+        </li>
+
+        <li class="list-group-item">
+            
+                <span class="glyphicon glyphicon-unchecked"></span> <span class="ir-icon-label">Задача не назначена</span>
+            
+        </li>
+
+        
+
+        
+            <a href="https://acm.bsu.by/courses/241/submit/?problem=3759" class="list-group-item">
+                <span class="glyphicon glyphicon-send"></span> <span class="ir-icon-label">Отправить решение</span>
+            </a>
+        
+
+        
+    </ul>
+
+
+                </div>
+            </div>
+            <div class="hidden-xs hidden-sm hidden-md col-sm-3 col-lg-2">
+                
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-info">
+            Задача
+        </li>
+
+        <li class="list-group-item">
+            
+                <span class="glyphicon glyphicon-unchecked"></span> <span class="ir-icon-label">Задача не назначена</span>
+            
+        </li>
+
+        
+
+        
+            <a href="https://acm.bsu.by/courses/241/submit/?problem=3759" class="list-group-item">
+                <span class="glyphicon glyphicon-send"></span> <span class="ir-icon-label">Отправить решение</span>
+            </a>
+        
+
+        
+    </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+        
+        
+
+        <footer class="footer">
+            <div class="container">
+                <div class="ir-footer">
+                    <div>Insight Runner 2 <span class="ir-monospace">#3883b81</span></div>
+                    <div>© 2001–2021 Кафедра ДМА ФПМИ БГУ</div>
+                    <div>
+                        <a href="https://acm.bsu.by/about/">О системе</a>
+                        <a href="https://acm.bsu.by/language/?next=/courses/241/problems/3759/">Язык / Language</a>
+                        <a href="https://acm.bsu.by/feedback/new/">Обратная связь</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+
+</body></html>
